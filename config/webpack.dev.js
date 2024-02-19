@@ -13,6 +13,22 @@ module.exports = {
     devServer: {
         static: {
             directory: join(__dirname, '../dist'),
-        },
+        }
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        // Injects styles into html
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
+            }
+        ]
     }
 };
