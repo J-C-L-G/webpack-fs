@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:prod": "npx webpack --mode=production",
+    "build:prod": "npx webpack --mode=production --config=config/webpack.dev.js",
     "build:dev": "npx webpack --config=config/webpack.dev.js",
     "start:dev": "npx webpack-dev-server --config=config/webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,10 @@
     "webpack": "^5.90.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0"
   }
 }

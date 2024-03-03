@@ -1,2 +1,3 @@
-require('./main.css')
-alert('hello world');
+require('./index.html');
+require('./main.css');
+console.log('hello world!!');
