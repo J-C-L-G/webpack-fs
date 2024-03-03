@@ -1,3 +1,10 @@
 require('./index.html');
 require('./main.css');
-console.log('hello world!!');
+
+const fn = () => {
+    console.log('hello world!!');
+};
+
+window.test = {
+    method: fn
+}

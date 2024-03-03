@@ -11,3 +11,6 @@
 ### Chapter 3: File Extract loaders for `HTML` and `Images`
 ![image-with-hash.png](docs%2Fepisode-3%2Fimage-with-hash.png)
 
+### Chapter 4: [Babel](https://babeljs.io/) JS Transpiler Introduction
+![babel-js-transpiler.png](docs%2Fepisode-4%2Fbabel-js-transpiler.png)
+
