@@ -2,7 +2,7 @@ const { join } = require('path');
 
 module.exports = {
     entry: {
-        main: './src/main.js'
+        main: ['babel-polyfill', './src/main.js']
     },
     mode: 'development',
     output: {

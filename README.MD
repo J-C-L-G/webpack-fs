@@ -14,3 +14,4 @@
 ### Chapter 4: [Babel](https://babeljs.io/) JS Transpiler Introduction
 ![babel-js-transpiler.png](docs%2Fepisode-4%2Fbabel-js-transpiler.png)
 
+### Chapter 5: [Babel](https://babeljs.io/) Plugins and Presets
