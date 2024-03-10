@@ -1,4 +1,5 @@
 const { join } = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -17,6 +18,7 @@ module.exports = {
         client: {
             overlay: true,
         },
+        hot: true
     },
     module: {
         rules: [
@@ -80,6 +82,10 @@ module.exports = {
                     name: "images/[name]-[hash:8].[ext]"
                 }
             }
-        ]
-    }
+        ],
+    },
+    plugins: [
+        // https://www.npmjs.com/package/webpack-hot-middleware#installation--usage
+        new webpack.HotModuleReplacementPlugin(),
+    ]
 };

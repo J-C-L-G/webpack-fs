@@ -85,3 +85,45 @@ The transformation plugin is typically used only in development, but the runtime
 }
 ```
 
+### Chapter 6: Create a DevServer with Express
+- [@babel/register](https://babeljs.io/docs/babel-register)
+- [webpack-dev-middleware](https://www.npmjs.com/package/webpack-dev-middleware)
+- [Webpack Hot Middleware](https://www.npmjs.com/package/webpack-hot-middleware)
+
+```js
+import {webpack} from 'webpack';
+import wdm from 'webpack-dev-middleware';
+import whm from 'webpack-hot-middleware';
+import config from '../../config/webpack.dev';
+
+...
+const compiler = webpack(config);
+const webpackDevMiddleware = wdm(
+    compiler,
+    {
+        stats: true,
+    }
+);
+const webpackHotMiddleware = whm(compiler);
+const staticMiddleware = express.static('dist');
+...
+server.use(webpackDevMiddleware);
+server.use(webpackHotMiddleware);
+server.use(staticMiddleware);
+```
+
+In Webpack configuration
+```js
+    plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+]
+```
+
+And finally in the client's entry point:
+```js
+require('webpack-hot-middleware/client');
+```
+
+![hmr-enabled.png](docs%2Fepisode-6%2Fhmr-enabled.png)
+
+

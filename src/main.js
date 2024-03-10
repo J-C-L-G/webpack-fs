@@ -1,3 +1,4 @@
+require('webpack-hot-middleware/client');
 require('./index.html');
 require('./main.css');
 
@@ -11,4 +12,6 @@ window.test = {
     method: fn
 }
 
-window.test.method({a: '1', b: '2', c: '3'})
+window.test.method({a: '1', b: '2', c: '3'});
+
+alert('This is a test!')
